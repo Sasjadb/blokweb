@@ -36,17 +36,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  <a href="https://www.bvhoofddorp.nl">BV Hoofddorp</a>
+  <a href="https://stach-food.nl">Stach</a>
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  BV Hoofddorp VSE1
-  <img src="readme-images/dames-bvh.png" width="375px" alt="Afbeelding van de VSE1 pagina">
-  <a href="https://www.bvhoofddorp.nl/teampagina-dames-senioren-1">BV Hoofddorp VSE1</a>
+  Stach - Winkel
+  <img src="readme-images/winkels" width="375px" alt="Afbeelding van pagina winkel">
+  <a href="https://stach-food.nl/winkels/">Pagina winkel</a>
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Wedstrijden
-  <img src="readme-images/wedstrijd-bvh.png" width="375px" alt="Afbeelding van de wedstrijden van BVH">
-  <a href="https://www.bvhoofddorp.nl/wedstrijden">Wedstrijden BV Hoofddorp</a>
+  Stach - Over ons
+  <img src="readme-images/overons.png" width="375px" alt="Afbeelding van pagina over ons">
+  <a href="https://stach-food.nl/over-ons/">Pagina over ons</a>
  
 </details>
 

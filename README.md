@@ -113,17 +113,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  De opdrachten maken ging vaak wel goed. Ik kon van de blauwe piste vaak alle opdrachten wel maken, maar rood lukte nog niet. Met de website maken was ik eerst begonnen om alle content erin te zetten en toen wilde ik beginnen aan de css, maar het werd een beetje rommelig. Ik heb toen ervoor gekozen om gewoon bovenaan de pagina te beginnen en zo verder naar beneden te werken. Ik vind het wel nog lastig om wat we in de opdrachten leren toe te passen op de website, ik weet soms nog niet precies wat ik waarvoor kan/moet gebruiken. Daardoor duurt alles veel langer en ben ik heel veel aan het op- en uitzoeken.
+  
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Jeannet                      | Mischa             | Naïm         | Sasja                             |
+  | ---                          | ---                | ---          | ---                               |
+  | Video readme                 | Witruimte          | ...          | Hamburgermenu responsive          |
+  | Dynamische breakdown schets  | ...                | ...          | Wanneer flexbox, grid of position |             
+  | ...                          | ...                | ...          | ...                               |
 
 
   ### Verslag van meeting

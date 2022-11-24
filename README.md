@@ -41,12 +41,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenshot(s) van de eerste pagina (small screen): 
   Stach - Winkel
   <img src="readme-images/winkels" width="375px" alt="Afbeelding van pagina winkel">
-  <a href="https://stach-food.nl/winkels/">Pagina winkel</a>
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Stach - Over ons
   <img src="readme-images/overons.png" width="375px" alt="Afbeelding van pagina over ons">
-  <a href="https://stach-food.nl/over-ons/">Pagina over ons</a>
  
 </details>
 
@@ -96,10 +94,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/pagina1.png" width="375px" alt="Breakdownschets pagina 1">
 
   ### Tweede pagina:
-  <img src="readme-images/pagina2.psd" width="375px" alt="Breakdownschets pagina 2">
+  <img src="readme-images/pagina2.png" width="375px" alt="Breakdownschets pagina 2">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 

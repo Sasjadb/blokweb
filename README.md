@@ -126,10 +126,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Menubalk met hamburger menu komt volgende week met javascript, dus eerst verder werken aan de site en dan volgende week daar naar kijken. Het handigste is om te beginnen met een klein scherm met daar een hamburger menu en dan een @media te gebruiken wanneer het scherm groter word.
+  - De echte website zit best goed in elkaar dus daar goed kijken wat zij gebruiken en dat overnemen. Voor de verschillende winkels/steden flexbox gebruiken met flexwrap en een max-width gebruiken om ervoor te zorgen dat er niet te veel naast elkaar staan.
+
 
 </details>
 
@@ -143,17 +142,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Het is mij een soort van geluk om het hamburger menu voor elkar te krijgen. Eigenlijk wil ik nog dat als het scherm groot genoeg is dat dan het hamburger menu weer weggaat, maar ik ga nog kijken of ik dat verder wil uitzoeken. Voor de rest ben ik wel al redelijk goed op weg, ik heb wel met een paar dingen dat ik niet zo goed weet hoe ik dat zelf kan oplossen.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Jeannet    | Mischa    | Naïm    | Sasja                             |
+  | ---        | ---       | ---     | ---                               |
+  | ---        | ---       | ...     | In het midden krijgen             |
+  | ---        | ---       | ...     | Het stukje met plaatje en tekst van Utrecht en hoe dat goed onder elkaar komt en als de ruimte er is dat het dan naast elkaar is. |             
+  | ...        | ...       | ...     | ...                               |
 
 
   ### Verslag van meeting

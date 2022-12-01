@@ -148,11 +148,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Jeannet    | Mischa    | Naïm    | Sasja                             |
-  | ---        | ---       | ---     | ---                               |
-  | ---        | ---       | ...     | In het midden krijgen             |
+  | Jeannet    | Mischa    | Naïm    | Sasja                                  |
+  | ---        | ---       | ---     | ---                                    |
+  | ---        | ---       | ...     | In het midden krijgen                  |
   | ---        | ---       | ...     | Het stukje met plaatje en tekst van Utrecht en hoe dat goed onder elkaar komt en als de ruimte er is dat het dan naast elkaar is. |             
-  | ...        | ...       | ...     | ...                               |
+  | ...        | ...       | ...     | Zwarte lijnen tussen sommige stukken   |
 
 
   ### Verslag van meeting

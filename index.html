@@ -6,23 +6,46 @@
 	<meta name="author" content="Sasja de Boer">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Stach Winkels</title>
+	<title>Stach</title>
 	
-	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/style1.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/logo_tab.webp">
 </head>
 
 <body>
-	<header>
-		<img src="images/winkels_boven.jpeg" alt="header image of shop">
-		<section>
-			<h1>Lekker in de buurt</h1>
-			<h2>Onze winkel</h2>
-		</section>
-	</header>
+    <header>
+        <a href="" aria-label="stach">
+            <p><span>S</span><span>T</span><span>A</span><span>C</span><span>H</span></p>
+        </a>
+        <button aria-hidden="true"><img src="images/menu-hamburger.svg" alt="">
+        </button>
+        
+        <nav>
+            <button aria-hidden="true"><img src="images/close-window.svg" alt="" /></button>
+            <ul>
+                <li><a href="winkels.html">Winkels</a></li>
+                <li><a href="overons.html">Over ons</a></li>
+                <li><a href="#">Werken bij</a></li>
+                <li><a href="#">Stach app</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Bestel online</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<main>
-		<section>
+
+
+    <main class="eerstepagina">
+        <span>
+            <img src="images/winkels_boven.jpeg" alt="header image of shop">
+        <section aria-label="letterspringen">
+            <h1>Onze winkel</h1>
+            <h2>Lekker in de buurt</h2>
+        </section>
+        </span>
+    
+
+        <section>
 			<ul>
                 <li> <button>Amsterdam</button></li>
                 <li> <button>Almere</button></li>
@@ -38,15 +61,85 @@
                 <li> <button>Winkel</button></li>
                 <li> <button>Alle winkels</button></li>
             </ul>
-		</section>	
+		</section>
 
-		
-	</main>
-	
-	
-	
+        <section>
+            <img src="images/winkel-utrecht1.jpeg" alt="">
+            <article>
+                <h2>Utrecht / Binnenstad / Winkel / café</h2>
+                <p>Choorstraat 42</p>
+                <p>3511 KN Utrecht</p>
+                <p>T 030 - 7370027</p>
+                <p>ma - za 08:00 - 20:00</p>
+                <p>zo 09:00 - 20:00</p>
+                <a href="https://www.google.nl/maps/search/Choorstraat+42,+3511+KN+Utrecht">
+                    <button>Google Maps</button>
+                </a>
+                <p>Tegenover de Dom aan het water, opende STACH zijn eerste winkel in Utrecht. 
+                Liefde op het eerste gezicht met het pand aan de Choorstraat waar al ons lekkers past op de 25m2. 
+                Op de vide drink je koffie met uitzicht op één van de oudste winkelstraten van Utrecht.</p>
 
-	<script defer src="scripts/script.js"></script>
+            </article>
+        </section>
+
+        <section>
+            <img src="images/utrecht2.jpeg" alt="">
+            <article>
+                <h2>Utrecht / Binnenstad / Winkel / café</h2>
+                <p>Twijnstraat 1</p>
+                <p>3511 ZG Utrecht</p>
+                <p>T 030 - 7370061</p>
+                <p>ma - za 08:00 - 19:00</p>
+                <p>zo 10:00 - 19:00</p>
+                <a href="https://www.google.nl/maps/search/Twijnstraat+1,+3511+ZG+Utrecht">
+                    <button>Google Maps</button>
+                </a>
+                <p>STACH is een echte buurtwinkel en de Twijnstraat is daarom een straat naar ons hart. 
+                    Je vindt er leuke winkels van kleine ondernemers. Uitkijkend op de gracht met uitzicht op de werfkleder, 
+                    bieden we hier onze verse maaltijden, salades en soepen aan.</p>
+
+            </article>
+        </section>
+        
+        
+        
+    </main>
+
+    <footer>
+        <section>
+            <a href="#">
+                <img src="images/logo.jpeg" alt="go home">
+            </a>
+            <ul>
+                <li> <p>Het leukste contact hebben we natuurlijk in de winkels!
+                    Voor overige vragen kun je altijd mailen naar <a href="mailto:hallo@stach-food.nl">hallo@stach-food.nl</a>
+                    We staan graag voor je klaar! </p></li>
+                <li> <button>Bestel online</button></li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li> <a href="">
+                    <img src="images/icons8-facebook-f.svg" alt=""></li>
+                </a>
+                <li> <a href="">
+                    <img src="images/icons8-instagram-40.png" alt=""></li>
+                </a>
+                <li> <a href="">
+                    <img src="images/icons8-deliveroo-a-british-online-food-delivery-company-40.png" alt=""></li>
+                </a>
+                <li> <a href="">
+                    <img src="images/icons8-home-page-40.png" alt=""></li>
+                </a>
+                <li> <a href="">
+                    <img src="images/icons8-uber-eats-app.svg" alt=""></li>
+                </a>
+            </ul>
+        </section>
+        
+        
+
+    </footer>
+
+    <script src="script/script.js"></script>
 </body>
-	
-</html>

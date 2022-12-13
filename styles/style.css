@@ -156,10 +156,8 @@
     margin-top: 10px;
   }
 
-  header > button:hover {
-    background-color: var(--color-footer);
-  }
-
+  
+  /* state button */
   header > button:focus {
     background-color: var(--color-blok1);
   }
@@ -212,6 +210,11 @@
     text-decoration: underline;
   }
 
+  /* state menu items */
+  header > nav > ul > li > a:focus {
+    background-color: var(--color-blok1);
+  }
+
 
   /* sluit button */
   header > nav > button {
@@ -225,6 +228,11 @@
   header > nav > button > img {
     width: 40px;
     height: 40px; 
+  }
+
+  /* state button*/
+  header > nav > button:focus {
+    background-color: var(--color-blok1);
   }
 
   
@@ -254,11 +262,6 @@
     padding-bottom: 20px;
   }
 
-  .zoom:hover {
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
 
   .eerstepagina > section:first-of-type > h1 {
     display: flex;

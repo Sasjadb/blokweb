@@ -139,6 +139,11 @@
     animation-play-state: running;
   }
 
+   /* state van logo header */
+   header > a[aria-label="stach"]:focus {
+    background-color: var(--color-blok1);
+  }
+
   /* hamburger menu */
   header > button > img{
     width: 50px;
@@ -149,6 +154,14 @@
     background-color: var(--color-background);
     border: none;
     margin-top: 10px;
+  }
+
+  header > button:hover {
+    background-color: var(--color-footer);
+  }
+
+  header > button:focus {
+    background-color: var(--color-blok1);
   }
 
   
@@ -239,6 +252,12 @@
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 20px;
+  }
+
+  .zoom:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 
   .eerstepagina > section:first-of-type > h1 {
@@ -378,15 +397,15 @@
   }
 
   /* states van google maps button */
-  .eerstepagina > section:nth-of-type(3) > article > a:hover {
+  .eerstepagina > section:nth-of-type(3) > article > span > a:hover {
     background-color: var(--color-blok2);
   }
 
-  .eerstepagina > section:nth-of-type(3) > article > a:active {
+  .eerstepagina > section:nth-of-type(3) > article > span > a:active {
     background-color: var(--color-blok1);
   }
 
-  .eerstepagina > section:nth-of-type(3) > article > a:focus {
+  .eerstepagina > section:nth-of-type(3) > article > span > a:focus {
     background-color: var(--color-footer);
   } 
 
@@ -771,30 +790,40 @@
 
   }
 
-  /* streepje boven logo */
+  /* streepje boven stach */
   footer > section:first-of-type > a {
     border-top: 2px solid var(--color-text);
+    text-decoration: none;
   }
 
-  /* focus state logo footer */
+  footer > section:first-of-type > a:hover {
+    background-color: var(--color-blok2);
+    width: 110px;
+  }
+
   footer > section:first-of-type > a:focus {
     background-color: var(--color-blok1);
+    width: 110px;
   }
 
-
-  /* dit is het logo van stach */
-  footer > section:first-of-type > a > img {
-    max-height: 7em;
-    max-width: 7em;
-    padding: 8px 5px 5px;
-    margin-top: 0.3em;
+  /* stach letter */
+  footer > section:first-of-type > a >h2 {
+    font-size: 2.3em;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: var(--color-text);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-text);
+    width: 84px;
+    margin: 10px 0px 10px 15px;
+    
   }
 
-  footer > section:first-of-type > ul {
-    padding: 0;
-  }
-
+  
   /* tekst onder logo */
+  footer > section:first-of-type > ul {
+    padding-left: 0;
+  }
+
   footer > section:first-of-type > ul > li {
     list-style: none;
     font-family: 'Montserrat', sans-serif;
@@ -812,6 +841,10 @@
   }
 
   /* focus state linkje voor de e-mail */
+  footer > section:first-of-type > ul > li > p > a:hover {
+    background-color: var(--color-blok2);
+  }
+
   footer > section:first-of-type > ul > li > p > a:focus {
     background-color: var(--color-blok1);
   }
@@ -921,15 +954,15 @@
 
 
   /* states iconen onderin */
-  footer > section:nth-of-type(2) > ul > li > a > img:hover {
+  footer > section:nth-of-type(2) > ul > li > a:hover {
     background-color: var(--color-blok1);
   }
 
-  footer > section:nth-of-type(2) > ul > li > a > img:active {
+  footer > section:nth-of-type(2) > ul > li > a:active {
     background-color: var(--color-blok2);
   }
 
-  footer > section:nth-of-type(2) > ul > li > a > img:focus {
+  footer > section:nth-of-type(2) > ul > li > a:focus {
     background-color: var(--color-blok1);
   }
 

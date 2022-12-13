@@ -40,7 +40,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Stach - Winkel
-  <img src="readme-images/winkels" width="375px" alt="Afbeelding van pagina winkel">
+  <img src="readme-images/winkels.png" width="375px" alt="Afbeelding van pagina winkel">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Stach - Over ons
@@ -88,11 +88,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### Eerste pagina: 
-  <img src="readme-images/pagina1.png" width="375px" alt="Breakdownschets pagina 1">
+  <img src="readme-images/schets1.png" width="375px" alt="Breakdownschets pagina 1">
 
   ### Tweede pagina:
-  <img src="readme-images/pagina2.png" width="375px" alt="Breakdownschets pagina 2">
-
+  <img src="readme-images/schets2.png" width="375px" alt="Breakdownschets pagina 2">
 
 </details>
 

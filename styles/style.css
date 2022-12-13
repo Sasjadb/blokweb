@@ -1,102 +1,939 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Sans+Narrow&display=swap');
+
 /**************/
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
-}
+    box-sizing:border-box;  
+  }
+  
+  
+  button, summary {
+      cursor: pointer;
+  }
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  :root {
+      /* kleuren voor de hele site normaal */
+      --color-text:#000000;
+      --color-heading: #000000;
+      --color-menu: #ffffff;
+      --color-logo: #ffd900;
+      --color-background:#ffffff;
+      --color-blokwinkel: rgb(238,238,238);
+      --color-blok1: pink;
+      --color-blok2: rgb(182,227,212);
+      --color-footer: #ffd900;
+      --color-focus: #800080;
+      
+  }
 
-button, summary {
-	cursor: pointer;
-}
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-}
-
-
-/****************/
-/* Pagina winkels */
-/****************/
-
-/** menubalk **/ 
+  @media (prefers-color-scheme:dark) {
+    :root {
+      /* kleuren voor dark mode */
+      --color-text:#ffffff;
+      --color-heading: #ffffff;
+      --color-menu: #121212;
+      --color-logo: #f48d06;
+      --color-background:#121212;
+      --color-blokwinkel: #37718e;
+      --color-blok1: #bfacc8;
+      --color-blok2: #94ae89;
+      --color-footer: #f48d06;
+    }
+  }
+  
 
 
-/** bovenste plaatje met tekst **/ 
-header {
-    background-color: orange;
+  
+  /****************/
+  /* Header */
+  /****************/
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+  }
+
+  
+
+
+  /** menubalk **/ 
+  header{
+    min-height: 4em;
+    padding: 0 1em;
+    line-height: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    margin-bottom: 0.3em;
+    background-color: var(--color-background);
+    margin-left: 0;
+  }
+
+  /* Header logo */
+  /* animatie logo */
+  @keyframes stach-animation {
+    0%{
+      transform: none;
+    }
+    10%{
+      transform: scale(1.2, .8);
+    }
+    20%{
+      transform: scale(.6, 1.5) translateY(-.25em);
+      color: var(--color-logo);
+    }
+    30%{
+      transform: scale(1.3, .7);
+    }
+    40%{
+      transform: scale(.9, 1.1);
+    }
+    50%{
+      transform: none;
+    }
+    100%{
+      transform: none;
+    }
+  }
+
+  header > a[aria-label="stach"] {
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-text);
+  }
+
+  header > a[aria-label="stach"] p {
+    font-size: 2.3em;
+    margin: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  header > a[aria-label="stach"] span {
+    display: inline-block;
+    transform-origin: center bottom;
+    animation-name: stach-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+  }
+
+  header > a[aria-label="stach"] span:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+
+  header > a[aria-label="stach"] span:nth-of-type(2) {
+    animation-delay: .15s;
+  }
+
+  header > a[aria-label="stach"] span:nth-of-type(3) {
+    animation-delay: .3s;
+  }
+
+  header > a[aria-label="stach"]:hover span {
+    animation-play-state: running;
+  }
+
+  /* hamburger menu */
+  header > button > img{
+    width: 50px;
+    background-color: var(--color-background);
+  }
+
+  header > button {
+    background-color: var(--color-background);
+    border: none;
+    margin-top: 10px;
+  }
+
+  
+  /* menu wat uitklapt */
+  header > nav {
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    transform:translatex(-100%);
+    transition: 1s;
+    background-color: var(--color-background);
+  }
+
+  /* als het menu open is */
+  header > nav.toonMenu {
+    transform:translatex(0);
+  }
+
+  /* tekst in hamburger menu */
+  header > nav > ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
+    justify-content: flex-end;
+    text-align: center;
+    align-self: center;
+    padding-left: 0; 
+    margin-top: 60px;
+  }
 
-header, img {
+  header > nav > ul > li {
+    padding: .7em 0;
+    list-style: none; 
+    font-size: 1.5em;  
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin-bottom: 15px; 
+    text-transform: uppercase;
+  }
+
+  header > nav > ul > li > a {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  /* hover over menu items */
+  header > nav > ul > li > a:hover {
+    text-decoration: underline;
+  }
+
+
+  /* sluit button */
+  header > nav > button {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    background-color: var(--color-background);
+    border: none;
+  }
+
+  header > nav > button > img {
+    width: 40px;
+    height: 40px; 
+  }
+
+  
+  
+
+  /****************/
+  /* Pagina winkels */
+  /****************/
+
+  /* bovenste plaatje met tekst */
+  .eerstepagina > span:first-of-type {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .eerstepagina > span > img {
     width: 100%;
-    height: 20rem;
+    height: 450px;
     object-fit: cover;
-}
+  } 
+  
+  .eerstepagina > span > section:first-of-type  {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    background-color: var(--color-background);
+    margin-top: -4em; 
+    padding: 1em;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--color-text);
+  }
+
+  .eerstepagina > span > section:first-of-type > h1 {
+    font-size: 18px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1px;
+    color: var(--color-heading);
+    margin: 0;
+  }
+  
+  .eerstepagina > span > section:first-of-type > h2 {
+    font-size: 35px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1px;
+    color: var(--color-heading);
+    margin: 10px 0px;
+  }
+
+ 
+
+  /* voor knoppen met verschillende winkels en locaties */
+  .eerstepagina > section {
+    align-items: center;
+  }
+
+  .eerstepagina > section > ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 550px;
+    justify-content: center;
+    padding: 0;
+    margin-top: 5em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .eerstepagina > section > ul > li {
+    margin: 10px;
+  }
 
 
-header > section{
-    background-color: white;
-    display: inline-block;
-    padding: 0 1.2em;
-    margin-top: -6em;
-	text-align: center;
-}
+  .eerstepagina > section> ul > li > button {
+    background:none;
+    padding: 4px 10px;
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+  }
 
-header > section > h1{
-	font-size: 1.7em;
-	font-weight: 400;
-	text-transform: uppercase;
-	font-family: sans-serif;
-}
+  /* states van knoppen */
+  .eerstepagina > section> ul > li > button:hover {
+    background-color: var(--color-blok2);
+  }
 
-header > section > h2{
-	font-size: 1.2em;
-	font-weight: 400;
-	font-family: sans-serif;
-}
+  .eerstepagina > section> ul > li > button:active {
+    background-color: var(--color-blok1);
+  }
 
+  .eerstepagina > section> ul > li > button:focus {
+    background-color: var(--color-footer);
+  }
 
 
 
-/** Keuze welke winkel of wat voor soort **/
-main > section {
-	background-color: blue;
-
-}
 
 
-ul{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 1em;
-	
-}
-
-li{
-	list-style: none;
-
-}
-
-button {
-	background-color: white;
-	padding: 4px 10px;
-}
+  /* eerste winkel */
+  .eerstepagina > section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 550px;
+    background-color: var(--color-blokwinkel);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+  }
 
 
-/** resultaten van winkels **/ 
+  .eerstepagina > section:nth-of-type(2) > img {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+
+
+  .eerstepagina > section:nth-of-type(2) > article {
+    text-align: center;
+    padding: 35px
+  }
+
+  .eerstepagina > section:nth-of-type(2) > article > h2 {
+    font-size: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 400;
+    color: var(--color-text);
+    text-transform: none;
+    letter-spacing: .7px;
+    margin-bottom: 0;
+    padding-bottom: 3px;
+    border-bottom: 1.2px solid var(--color-text);
+  }
+
+  .eerstepagina > section:nth-of-type(2) > article > p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--color-text);
+    line-height: 23px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin: 5px 0;
+  }
+
+  .eerstepagina > section:nth-of-type(2) > article > p:first-of-type {
+    margin-top: 3em;
+  }
+
+  .eerstepagina > section:nth-of-type(2) > article > a > button {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    padding: 10px 6px;
+    margin-bottom: 30px;
+    background:none;
+  }
+
+  /* states van google maps button */
+  .eerstepagina > section:nth-of-type(2) > article > a > button:hover {
+    background-color: var(--color-blok2);
+  }
+
+  .eerstepagina > section:nth-of-type(2) > article > a > button:active {
+    background-color: var(--color-blok1);
+  }
+
+  .eerstepagina > section:nth-of-type(2) > article > a > button:focus {
+    background-color: var(--color-footer);
+  } 
+
+
+  .eerstepagina > section:nth-of-type(2) > article > p:last-of-type {
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+  }
+
+  /* tweede winkel */
+  .eerstepagina > section:nth-of-type(3) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 550px;
+    background-color: var(--color-blokwinkel);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+  }
+
+  .eerstepagina > section:nth-of-type(3) > img {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+
+
+  .eerstepagina > section:nth-of-type(3) > article {
+    text-align: center;
+    padding: 35px
+  }
+
+  .eerstepagina > section:nth-of-type(3) > article > h2 {
+    font-size: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 400;
+    color: var(--color-text);
+    text-transform: none;
+    letter-spacing: .7px;
+    margin-bottom: 0;
+    padding-bottom: 3px;
+    border-bottom: 1.2px solid var(--color-text);
+  }
+
+  .eerstepagina > section:nth-of-type(3) > article > p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin: 5px 0;
+    color: var(--color-text);
+  }
+
+  .eerstepagina > section:nth-of-type(3) > article > p:first-of-type {
+    margin-top: 3em;
+  }
+
+  .eerstepagina > section:nth-of-type(3) > article > a > button {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    padding: 10px 6px;
+    margin-bottom: 30px;
+    background:none;
+  }
+
+  /* states van google maps button */
+  .eerstepagina > section:nth-of-type(3) > article > a > button:hover {
+    background-color: var(--color-blok2);
+  }
+
+  .eerstepagina > section:nth-of-type(3) > article > a > button:active {
+    background-color: var(--color-blok1);
+  }
+
+  .eerstepagina > section:nth-of-type(3) > article > a > button:focus {
+    background-color: var(--color-footer);
+  } 
+
+
+  /* laatste alinea grijs blokje */
+  .eerstepagina > section:nth-of-type(3) > article > p:last-of-type {
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+  }
+
+ 
 
 
 
-/** footer **/ 
+   /****************/
+  /* Pagina over ons */
+  /****************/
+
+  /* bovenste plaatje met tekst */
+  .tweedepagina > span:first-of-type {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .tweedepagina > span > img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  } 
+
+  .tweedepagina > span > section:first-of-type  {
+    display: flex;
+    flex-direction: column-reverse;
+  text-align: center;
+  background-color: var(--color-background);
+  margin-top: -4em; 
+  padding: 1em;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--color-text);
+  }
+
+  .tweedepagina > span > section:first-of-type > h1 {
+    font-size: 18px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 400;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: .1px;
+    margin: 0;
+    padding-top: 1em;
+    }
+
+  .tweedepagina > span > section:first-of-type > h2 {
+  font-size: 35px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: .1px;
+  margin: 10px 0px;
+  }
+
+ 
+
+  /* inleidende tekst */
+  .tweedepagina > section:first-of-type {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--color-text);
+    line-height: 1.5;
+    letter-spacing: .3px;
+    max-width: 550px;
+    text-align: center;
+    margin: 10px auto 60px auto;
+    padding: 20px 20px 0;    
+  }
+
+  .tweedepagina > section:first-of-type > p:first-of-type {
+    font-size:  16px;
+    font-weight: 300;
+  }
+
+  .tweedepagina > section:first-of-type > p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  .tweedepagina > section:first-of-type > p:nth-of-type(3) {
+    font-size: 13px;
+  }
+
+  /* roze blokje */
+  .tweedepagina > section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 550px;
+    background-color: var(--color-blok1);
+    color: var(--color-text);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .tweedepagina > section:nth-of-type(2) > img {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+
+  .tweedepagina > section:nth-of-type(2) > article {
+    text-align: center;
+    padding: 35px;
+  }
+
+  .tweedepagina > section:nth-of-type(2) > article > span {
+    color: var(--color-text);
+    font-size: 25px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-transform: none;
+    letter-spacing: .69px;
+    border-bottom: 1.5px solid var(--color-text);
+  }
+
+  .tweedepagina > section:nth-of-type(2) > article > p:first-of-type {
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  .tweedepagina > section:nth-of-type(2) > article > p:last-of-type {
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+   /* eerste witte blokje */
+   .tweedepagina > section:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-text);
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .tweedepagina > section:nth-of-type(3) > article:first-of-type {
+    padding: 25px;
+    padding-bottom: 0;
+    margin-bottom: 16px;
+  }
+
+  .tweedepagina > section:nth-of-type(3) > article:first-of-type > span {
+    font-size: 25px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: var(--color-text);
+    text-transform: none;
+    letter-spacing: .69px;
+    border-bottom: 1.5px solid var(--color-text);
+  }
+
+  .tweedepagina > section:nth-of-type(3) > article:first-of-type > p {
+    font-size: 13px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 300;
+    color: var(--color-text);
+    text-transform: none;
+    letter-spacing: .69px;  
+    margin-bottom: 2em;
+  }
+
+  .tweedepagina > section:nth-of-type(3) > article:last-of-type {
+    padding: 4em 0;
+    border-top: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
+  }
+
+  .tweedepagina > section:nth-of-type(3) > article:last-of-type > span {
+    font-size: 25px;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  .tweedepagina > section:nth-of-type(3) > article:last-of-type > h2 {
+    font-size: 35px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-transform: uppercase;
+    margin: .3em 0;
+  }
+
+  
+
+  /* blauw/groen blokje */
+  .tweedepagina > section:nth-of-type(4) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 550px;
+    background-color: var(--color-blok2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .tweedepagina > section:nth-of-type(4) > img {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+
+  .tweedepagina > section:nth-of-type(4) > article {
+    text-align: center;
+    color: var(--color-text);
+    padding: 35px;
+  }
+
+  .tweedepagina > section:nth-of-type(4) > article > span {
+    color: var(--color-text);
+    font-size: 25px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-transform: none;
+    letter-spacing: .69px;
+    border-bottom: 1px solid var(--color-text);
+  }
+
+  .tweedepagina > section:nth-of-type(4) > article > p:first-of-type {
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  .tweedepagina > section:nth-of-type(4) > article > p:nth-of-type(2) {
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  .tweedepagina > section:nth-of-type(4) > article > p:last-of-type {
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  /* tweede witte blokje */
+  .tweedepagina > section:nth-of-type(5) {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-text);
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .tweedepagina > section:nth-of-type(5) > article:first-of-type {
+    text-align: center;
+    padding: 4em 0;
+    border-top: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
+    margin-bottom: 1em;
+  }
+
+  .tweedepagina > section:nth-of-type(5) > article:first-of-type > span {
+    font-size: 25px;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  .tweedepagina > section:nth-of-type(5) > article:first-of-type > h2 {
+    font-size: 35px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-transform: uppercase;
+    margin: .3em 0;
+  }
+
+  .tweedepagina > section:nth-of-type(5) > img {
+    width: 100%;
+    object-fit: cover;
+  }
 
 
+
+
+
+
+
+
+
+/****************/
+  /* Footer */
+  /****************/
+  /*bovenste gedeelte */
+  footer {
+    background-color: var(--color-footer);
+    padding: 60px 15px;
+  }
+
+  /* flexbox om alles onder elkaar te zetten */
+  footer > section:first-of-type {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  /* streepje boven logo */
+  footer > section:first-of-type > a {
+    border-top: 2px solid var(--color-text);
+  }
+
+  /* focus state logo footer */
+  footer > section:first-of-type > a:focus {
+    background-color: var(--color-blok1);
+  }
+
+
+  /* dit is het logo van stach */
+  footer > section:first-of-type > a > img {
+    max-height: 7em;
+    max-width: 7em;
+    padding: 8px 5px 5px;
+    margin-top: 0.3em;
+  }
+
+  footer > section:first-of-type > ul {
+    padding: 0;
+  }
+
+  /* tekst onder logo */
+  footer > section:first-of-type > ul > li {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: var(--color-text);
+    padding: 0 20px;
+    border-bottom: 2px solid var(--color-text);
+  }
+
+
+  /* linkje e-mail in de p */
+  footer > section:first-of-type > ul > li > p > a {
+    color: var(--color-text);
+
+  }
+
+  /* focus state linkje voor de e-mail */
+  footer > section:first-of-type > ul > li > p > a:focus {
+    background-color: var(--color-blok1);
+  }
+
+  /* nieuwsbrief gedeelte footer*/
+  footer > section:first-of-type > ul > li:nth-of-type(2) > form {
+    margin: 20px 0;
+  }
+
+  footer > section:first-of-type > ul > li:nth-of-type(2) > form > input:first-of-type {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: var(--color-text);
+    width: 160px;
+    margin-top: 25px;
+    background-color: var(--color-footer);
+    padding: 4px 8px;
+    border: 1px solid var(--color-text);
+  }
+
+  /* states e-mailadres invul stuk */
+  footer > section:first-of-type > ul > li:nth-of-type(2) > form > input:first-of-type:hover {
+    background-color: var(--color-blok2);
+  }
+
+  footer > section:first-of-type > ul > li:nth-of-type(2) > form > input:first-of-type:active  {
+    background-color: var(--color-blok2);
+  }
+
+  footer > section:first-of-type > ul > li:nth-of-type(2) > form > input:first-of-type:focus {
+    background-color: var(--color-blok1);
+  }
+
+  /* versturen button */
+  footer > section:first-of-type > ul > li:nth-of-type(2) > form > input:nth-of-type(2) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: var(--color-heading);
+    color: var(--color-footer);
+    margin-top: 5px;
+    padding: 4px 8px;
+    border: 1px solid var(--color-text);
+  }
+
+  /* states versturen button */
+  footer > section:first-of-type > ul > li:nth-of-type(2) > form > input:nth-of-type(2):hover {
+    background-color: var(--color-blok1);
+    color: var(--color-text);
+  }
+
+  footer > section:first-of-type > ul > li:nth-of-type(2) > form > input:nth-of-type(2):active {
+    background-color: var(--color-blok2);
+  }
+
+  footer > section:first-of-type > ul > li:nth-of-type(2) > form > input:nth-of-type(2):focus {
+    background-color: var(--color-blok1);
+    color: var(--color-text);
+  }
+
+  /* bestel online button */
+  footer > section:first-of-type > ul > li:nth-of-type(3) > button {
+    padding: 4px 10px;
+    background: none;
+    margin: 20px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+  }
+
+  /* hover state bestel online button */
+  footer > section:first-of-type > ul > li:nth-of-type(3) > button:hover {
+    background-color: var(--color-text);
+    color: var(--color-footer);
+  }
+
+  footer > section:first-of-type > ul > li:nth-of-type(3) > button:active {
+    background-color: var(--color-blok2);
+  }
+
+  footer > section:first-of-type > ul > li:nth-of-type(3) > button:focus {
+    background-color: var(--color-blok1);
+    color: var(--color-text);
+  } 
+
+  
+
+  
+
+  /* Iconen gedeelte onderin */
+  footer > section:nth-of-type(2) {
+    display: flex;
+  }
+
+  footer > section:nth-of-type(2) > ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 10px;
+  }
+  
+  footer > section:nth-of-type(2) > ul > li > a > img {
+    width: 50px;
+    margin-right: 15px;
+  }
+
+
+  /* states iconen onderin */
+  footer > section:nth-of-type(2) > ul > li > a > img:hover {
+    background-color: var(--color-blok1);
+  }
+
+  footer > section:nth-of-type(2) > ul > li > a > img:active {
+    background-color: var(--color-blok2);
+  }
+
+  footer > section:nth-of-type(2) > ul > li > a > img:focus {
+    background-color: var(--color-blok1);
+  }
 
 
 

@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauw
 
   #### Je focus:
-  Responsive
+  Surface plane
  
 </details>
 
@@ -224,18 +224,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Jeannet      | Mischa          | Naïm    | Sasja            |
-  | ---          | ---             | ---     | ---              |
-  | ---          | ---             | ---     | Letters springen is nu op een hover, kan dat ook met een klik?    |
-  | ---          | ---             | ---     | ---              |
-  | ...          | ...             | ...     | ...              |
+  | Jeannet  | Mischa  | Naïm  | Sasja            |
+  | ---      | ---     | ---   | ---              |
+  | ---      | ---     | ---   | Letters springen is nu en blijven dan half staan, kan dit ook anders.|
+  | ---      | ---     | ---   | Dark modus, dat de iconen ook van kleur veranderen.             |
+  | ...      | ...     | ...   | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - Ik heb van Sasja Koning een codepen gekregen met de uitleg hoe ik dit kan aanpassen. Voor nu heeft dit niet mijn aandacht en wil ik eerst zorgen dat de rest van de website af komt.
+  - Deze vraag over dark modus had iemand anders ook, dus ik heb daarbij meegekeken en uiteindelijk is het gelukt om de iconen ook van kleur te laten veranderen wanneer het in dark modus staat.
   - nog een punt
   - ...
 
@@ -261,7 +261,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik heb bij mijn logo bovenin dat de letters springen. Ik wilde eigenlijk dat als je daarvan af gaat dat de letters hun 'sprong' afmaken. Ik had hiervoor een soortgelijke codepen gekregen, maar ik vond dit nog wel lastig dus heb ik ervoor gekozen om dit zo te laten. Dit is de codepen > https://codepen.io/sasjakoning/pen/YzvaWEB
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
@@ -277,8 +277,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Voor het maken van het menu heb ik naar deze code gekeken > https://codepen.io/shooft/pen/GRxXboQ
+  2. Om de tekst op de afbeelding te krijgen bovenaan de pagina heb ik van Sasja Koning een codepen gekregen > https://codepen.io/sasjakoning/pen/YzvaWEB
+  3. Voor de iconen in dark modus ook van kleur te laten veranderen > https://ultimatecourses.com/blog/detecting-dark-mode-in-javascript (ik heb zelf gekeken naar hoe iemand anders dit heeft gedaan en toen hebben wij dit samen bij mijn project toegepast, maar dit is de link die zij had gebruikt en gekregen van Sasja Koning)
+  4. Voor het geluid als je klikt > https://codepen.io/shooft/details/NWMMyyd
+
+  
+  
 
 </details>

@@ -222,18 +222,18 @@
   /****************/
 
   /* bovenste plaatje met tekst */
-  .eerstepagina > section:first-of-type {
+  /*.eerstepagina > section:first-of-type {
     display: flex;
     flex-direction: column;
-  }
+  } */
   
-  .eerstepagina > section:first-of-type > img {
+  .eerstepagina > img {
     width: 100%;
     height: 450px;
     object-fit: cover;
   } 
   
-  .eerstepagina > section:first-of-type > span  {
+  .eerstepagina > section:first-of-type  {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
@@ -247,7 +247,9 @@
     border-bottom: 2px solid var(--color-text);
   }
 
-  .eerstepagina > section:first-of-type > span > h1 {
+  .eerstepagina > section:first-of-type > h1 {
+    display: flex;
+    flex-direction: column-reverse;
     font-size: 18px;
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 400;
@@ -257,13 +259,14 @@
     margin: 0;
   }
   
-  .eerstepagina > section:first-of-type > span > h2 {
+  .eerstepagina > section:first-of-type > h2 {
     font-size: 35px;
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: .1px;
     color: var(--color-heading);
+    background-color: var(--color-background);
     margin: 10px 0px;
   }
 
@@ -488,53 +491,49 @@
   /****************/
 
   /* bovenste plaatje met tekst */
-  .tweedepagina > section:first-of-type {
-  display: flex;
-  flex-direction: column;
-  }
-
-  .tweedepagina > section > img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
+  .tweedepagina > img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
   } 
-
-  .tweedepagina > section:first-of-type  > span {
+  
+  .tweedepagina > section:first-of-type  {
     display: flex;
     flex-direction: column-reverse;
-  text-align: center;
-  background-color: var(--color-background);
-  margin-top: -4em; 
-  padding: 1em;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--color-text);
+    text-align: center;
+    background-color: var(--color-background);
+    margin-top: -4em; 
+    padding: 1em;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--color-text);
   }
 
-  .tweedepagina > section:first-of-type > span > h1 {
+  .tweedepagina > section:first-of-type > h1 {
+    display: flex;
+    flex-direction: column-reverse;
     font-size: 18px;
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 400;
-    color: var(--color-text);
     text-transform: uppercase;
     letter-spacing: .1px;
+    color: var(--color-heading);
     margin: 0;
-    padding-top: 1em;
-    }
-
-  .tweedepagina > section:first-of-type > span > h2 {
-  font-size: 35px;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-weight: 400;
-  color: var(--color-text);
-  text-transform: uppercase;
-  letter-spacing: .1px;
-  margin: 10px 0px;
   }
-
- 
+  
+  .tweedepagina > section:first-of-type > h2 {
+    font-size: 35px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1px;
+    color: var(--color-heading);
+    background-color: var(--color-background);
+    margin: 10px 0px;
+  }
+  
 
   /* inleidende tekst */
   .tweedepagina > section:nth-of-type(2) {
